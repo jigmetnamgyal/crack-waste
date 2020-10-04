@@ -12,4 +12,9 @@ export class AuthController {
         return this.userService.singUp(data);
     }
 
+    @Post('/signin')
+    signIn(@Body(ValidationPipe) data:CreateUserDto){
+        return this.userService.signIn(data);
+    }
+
 }

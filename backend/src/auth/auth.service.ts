@@ -9,7 +9,12 @@ export class AuthService {
     @InjectRepository(UserRepository) private readonly userRepo: UserRepository,
   ) {}
 
-  async singUp(data:CreateUserDto):Promise<void>{
-      return this.userRepo.signUp(data);
+  async singUp(data: CreateUserDto): Promise<void> {
+    return this.userRepo.signUp(data);
+  }
+
+  async signIn(data: CreateUserDto) {
+    const username = await this.userRepo.validateUser(data);
+    console.log(username);
   }
 }
