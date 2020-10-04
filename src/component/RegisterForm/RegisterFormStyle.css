@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
+
+.form-title {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.container {
+  background: #eaf8e6;
+  padding: 10px 60px !important;
+  padding-bottom: 400px !important;
+  border-radius: 15px;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+}
+
+.form-title {
+  margin-bottom: 70px !important;
+  font-weight: 100;
+}
+.form-title span {
+  font-weight: bold;
+}

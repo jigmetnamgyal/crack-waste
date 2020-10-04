@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.3s ease all;
+}
+
+.main-page-svg-container {
+  z-index: -20;
+  height: 900px;
+  overflow-y: hidden;
+}
+.main-page-svg {
+  width: 140em;
+  z-index: -100;
+  position: relative;
+  top: -10;
+}
+
+.main-page-svg svg {
+  z-index: -10;
+  position: absolute;
+  left: 0;
+  top: -500px;
+}
+
+.main-page-svg {
+  height: 1000px;
+  transform: translate(-300px, -300px);
+}
+
+.main-page-title {
+  position: absolute;
+  z-index: 10;
+  top: 20%;
+  left: 10%;
+  font-size: 2.5rem;
+  color: white;
+}
+@media (min-width: 1024px) {
+  .main-page-title {
+    font-size: 3em;
+    top: 16%;
+  }
+}
+
+.main-page-info {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  padding: 40px;
+}
+
+.main-page-info .title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1032px) {
+}
+
+@media (max-width: 1024px) {
+  .main-page-svg {
+    width: 120em;
+  }
+
+  .main-page-svg svg {
+    left: -700px;
+    top: -600px;
+  }
+  .main-page-title {
+    font-size: 2em;
+    top: 16%;
+  }
+  .main-page-info {
+    top: 65%;
+    left: 2%;
+  }
+}
+
+@media (max-width: 450px) {
+  .main-page-svg {
+    width: 100em;
+  }
+
+  .main-page-svg svg {
+    left: -800px;
+    top: -500px;
+  }
+
+  .main-page-title {
+    font-size: 25px;
+    left: 2%;
+    top: 15%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-page-info {
+    top: 85%;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-page-svg-container {
+    height: 1100px;
+  }
+  .main-page-info {
+    top: 50%;
+  }
+}
