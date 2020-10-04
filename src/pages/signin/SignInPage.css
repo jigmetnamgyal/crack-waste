@@ -1,0 +1,50 @@
+.fullscreen-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.svImg1 {
+  width: 400px;
+  height: 400px;
+  margin-right: 80px;
+}
+
+.paper {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form {
+  width: 100%;
+}
+
+label {
+  color: black !important;
+}
+
+.signInBtn {
+  margin-top: 50px !important;
+}
+
+input {
+  outline: none !important;
+}
+/*# sourceMappingURL=SignInPage.css.map */

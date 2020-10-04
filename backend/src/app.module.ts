@@ -1,12 +1,14 @@
 import { Module } from '@nestjs/common';
-import { InfoModule } from './info/info.module';
+import { TasksModule } from './tasks/tasks.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { typeormConfig } from './config/typeorm.comfig';
+import { typeOrmConfig } from './config/typeorm.config';
 import { AuthModule } from './auth/auth.module';
 
 @Module({
-  imports: [InfoModule, TypeOrmModule.forRoot(typeormConfig), AuthModule],
-  controllers: [],
-  providers: [],
+  imports: [
+    TypeOrmModule.forRoot(typeOrmConfig),
+    TasksModule,
+    AuthModule,
+  ],
 })
 export class AppModule {}

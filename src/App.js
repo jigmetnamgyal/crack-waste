@@ -1,30 +1,33 @@
-import React from "react";
-import "./App.css";
+import React, {Component, Fragment} from 'react';
+import {Route} from 'react-router';
+import {inject, observer} from 'mobx-react';
+import Main from './components/MainPage/MainPage'
+import SignInPage from './pages/signin/SignInPage';
+import SignUpPage from './pages/signup/SignUpPage';
+import NavBar from './components/Navigation/Navigation';
+import GeoLocation from './pages/GeoLocation'
+// import TasksPage from './pages/tasks/TasksPage'; import CreateTaskPage from
+// './pages/create-task/CreateTaskPage';
+@inject('routerStore')
+@observer
+class App extends Component {
+    render() {
+        return (
+            <div>
 
-import "bootstrap/dist/css/bootstrap.min.css";
-import Navigation from "./component/Navigation/Navigation";
-import MainPage from "./component/MainPage/MainPage";
-import MiddlePage from "./component/MiddlePage/MiddlePage";
-import EndPage from "./component/EndPage/EndPage";
-import LoginForm from "./component/LoginForm/LoginForm";
-import RegisterForm from "./component/RegisterForm/RegisterForm";
-import ContactUsForm from "./component/ContactUsForm/ContactUsForm";
+                <Fragment>
+                    <Route exact="exact" path="/" component={SignInPage}/>
+                    <Route path="/main" component={Main}/>
+                    <Route path="/signin/" component={SignInPage}/>
+                    <Route path="/signup/" component={SignUpPage}/> 
+                    {/* <Route exact path="/tasks" component={TasksPage} />
+        <Route exact path="/tasks/create" component={CreateTaskPage} /> */}
+                     <Route path="/home" component={GeoLocation}/>
+                </Fragment>
+            </div>
 
-function App() {
-  return (
-    <div className="App">
-      <Navigation />
-      <MainPage />
-      <MiddlePage />
-      <EndPage />
-
-      {/* Down here is the list of Form components you can uncancel them to see it working*/}
-
-      {/* <LoginForm /> */}
-      {/* <RegisterForm /> */}
-      {/* <ContactUsForm /> */}
-    </div>
-  );
+        );
+    }
 }
 
 export default App;

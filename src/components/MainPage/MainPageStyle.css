@@ -1,0 +1,109 @@
+.mainPage{
+  height: 2000px;
+  width: 100%;
+
+}
+
+.mainPageHeader{
+  padding-top: 80px;
+  position: relative;
+  height: 90vh;
+  background-color: #8dc07b;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.content{
+  width: 40%;
+  background-color: #558d47;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 200px;
+  margin-right: 130px;
+  padding: 60px;
+
+}
+.one{
+  margin-left: 250px;
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+}
+.two{
+  margin: 0 auto;
+  font-size: 40px;
+  color: white;
+  text-transform: uppercase;
+}
+.three{
+  margin-left: -250px;
+  margin-top: 40px;
+  font-weight: 400;
+  font-size: 20px;
+  color: white;
+}
+.boxBorder{
+  position: absolute;
+  bottom: -120px;
+  width: 120%;
+  height: 20vh;
+  left: -10px;
+  background-color: #ffffff;
+  transform: rotate(3deg);
+  overflow: hidden;
+}
+
+.img12{
+  width: 300px;
+  height: 300px;
+  margin-top: 150px;
+}
+.section1{
+  display: grid;
+  grid-template-columns: 40% auto;
+}
+
+.random{
+  width: 70%;
+  height: 60vh;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+.random > h1{
+  text-align: center;
+}
+.random > p{
+  font-size: 17px;
+}
+
+.section1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.section2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 60px;
+  display: grid;
+  grid-template-columns: 60% auto;
+}
+.hah1img{
+  width: 500px;
+  height: 500px;
+}
+.idkName{
+  background-color: lightgray;
+}
