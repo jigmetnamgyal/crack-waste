@@ -5,7 +5,7 @@ function Navigation() {
   return (
     <Navbar bg="light" expand="lg">
       <Navbar.Brand href="#home">
-        crash<span style={{ fontWeight: "bolder" }}>Waste</span>
+        crack<span style={{ fontWeight: "bolder" }}>Waste</span>
       </Navbar.Brand>
       <Navbar.Toggle
         style={{ outline: "none", border: "none" }}
