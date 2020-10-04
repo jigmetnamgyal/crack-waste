@@ -1,6 +1,6 @@
-import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, Unique } from "typeorm";
-
+import { BaseEntity, Entity, PrimaryGeneratedColumn, Column, Unique, OneToMany } from "typeorm";
 import * as bcrypt from 'bcrypt';
+import { Info } from "src/info/info.entity";
 @Entity()
 @Unique(['username'])
 export class User extends BaseEntity{
@@ -20,4 +20,6 @@ export class User extends BaseEntity{
         const hash = await bcrypt.hash(password, this.salt);
         return hash === this.password;
     }
+    @OneToMany(type => Info, info => info.user, {eager: true})
+    info: Info[];
 }

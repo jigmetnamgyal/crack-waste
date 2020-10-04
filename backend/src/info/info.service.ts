@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { InfoRepository } from './info.repository';
 import { CreateInfoLocation } from './dto/createInfo.dto';
+import { User } from 'src/auth/user.entity';
 @Injectable()
 export class InfoService {
   constructor(
@@ -9,7 +10,7 @@ export class InfoService {
   ) {}
 
 
-  async createInfo(createInfoDto:CreateInfoLocation):Promise<void>{
-      return this.infoRepo.CreateLocation(createInfoDto);
+  async createInfo(createInfoDto:CreateInfoLocation, user:User){
+      return this.infoRepo.CreateLocation(createInfoDto, user);
   }
 }

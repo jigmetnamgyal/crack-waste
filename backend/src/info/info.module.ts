@@ -3,10 +3,11 @@ import { InfoController } from './info.controller';
 import { InfoService } from './info.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { InfoRepository } from './info.repository';
+import { AuthModule } from 'src/auth/auth.module';
 
 @Module({
-  imports: [TypeOrmModule.forFeature([InfoRepository])],
+  imports: [TypeOrmModule.forFeature([InfoRepository]), AuthModule],
   controllers: [InfoController],
-  providers: [InfoService]
+  providers: [InfoService],
 })
 export class InfoModule {}
